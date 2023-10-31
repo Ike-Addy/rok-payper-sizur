@@ -28,5 +28,20 @@ function getPlayerChoice() {
 }
 
 function playRound(playerSelection, computerSelection) {
+    let playerSelection = getPlayerChoice();
+    let computerSelection = getComputerChoice();
 
+    if (playerSelection == computerSelection) {
+        console.log('its a tie!');
+    } else if (playerSelection == 'rock' && computerSelection == 'scissor') {
+        console.log('you win!');
+    } else if (playerSelection == 'scissor' && computerSelection == 'paper') {
+        console.log('you win!');
+    } else if (playerSelection == 'paper' && computerSelection == 'rock') {
+        console.log('you win!');
+    } else {
+        console.log('you lose :(')
+    }
 }
+
+playRound()
